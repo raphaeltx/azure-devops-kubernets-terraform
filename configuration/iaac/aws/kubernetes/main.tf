@@ -3,10 +3,9 @@
 
 terraform {
   backend "s3" {
-    bucket   = "mybucket" # Will be overridden from build
-    key      = "path/to/my/key" # Will be overridden from build
-    region   = "us-east-2"
-    endpoint = "http://s3.localhost.localstack.cloud:4566"
+    bucket = "mybucket" # Will be overridden from build
+    key    = "path/to/my/key" # Will be overridden from build
+    region = "us-east-2"
   }
 }
 
