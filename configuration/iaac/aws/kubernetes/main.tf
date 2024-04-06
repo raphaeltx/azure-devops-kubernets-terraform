@@ -1,3 +1,6 @@
+# terraform-backend-state-learning
+# AKIAQRA7PEMMVTZGG2GL
+
 terraform {
   backend "s3" {
     bucket = "mybucket" # Will be overridden from build
@@ -26,9 +29,9 @@ provider "kubernetes" {
   //>>Uncomment this section once EKS is created - End
 }
 
-module "devops-essentials-cluster" {
+module "devops-learning-cluster" {
   source          = "terraform-aws-modules/eks/aws"
-  cluster_name    = "devops-essentials-cluster"
+  cluster_name    = "devops-learning-cluster"
   cluster_version = "1.29"
   subnet_ids         = ["subnet-2f427347", "subnet-ac7a15d6", "subnet-eb63b4a7"]
   vpc_id          = aws_default_vpc.default.id
