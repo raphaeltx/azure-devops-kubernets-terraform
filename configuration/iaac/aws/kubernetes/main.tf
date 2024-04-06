@@ -22,7 +22,7 @@ data "aws_subnets" "subnets" {
 
 provider "kubernetes" {
   host                   = data.aws_eks_cluster.cluster.endpoint
-  cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority[0].data)
+  cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority.0.data)
   token                  = data.aws_eks_cluster_auth.cluster.token
 }
 
@@ -53,11 +53,11 @@ module "devops-learning-cluster" {
 }
 
 data "aws_eks_cluster" "cluster" {
- name = "devops-learning-cluster" #module.in28minutes-cluster.cluster_name
+ name = module.devops-learning-cluster.cluster_name
 }
 
 data "aws_eks_cluster_auth" "cluster" {
-  name = "devops-learning-cluster" #module.in28minutes-cluster.cluster_name
+  name = module.devops-learning-cluster.cluster_name
 }
 
 resource "kubernetes_cluster_role_binding" "example" {
