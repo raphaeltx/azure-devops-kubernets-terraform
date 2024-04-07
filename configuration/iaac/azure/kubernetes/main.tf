@@ -38,5 +38,6 @@ terraform {
     storage_account_name="storageacctraph"
     key="kubernetes-dev.tfstate"
     container_name="storageacctraphcontainer"
+    access_key = "OHVwHzyrX2E25fz6oPmkrGL2q8ySUKbc2hlhug1vHm5T8gKO+DiE58CS2tNcZvSSWV2MnnYLztLt+AStezV0gQ=="
   }
 }
