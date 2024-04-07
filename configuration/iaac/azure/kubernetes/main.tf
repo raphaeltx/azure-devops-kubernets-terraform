@@ -35,8 +35,8 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
 
 terraform {
   backend "azurerm" {
-    storage_account_name="storageacctraph" #OVERRIDE in TERRAFORM init
-    key="kubernetes-dev.tfstate" #OVERRIDE in TERRAFORM init
-    container_name="storageacctraphcontainer" #OVERRIDE in TERRAFORM init
+    storage_account_name="storageacctraph"
+    key="kubernetes-dev.tfstate"
+    container_name="storageacctraphcontainer"
   }
 }
