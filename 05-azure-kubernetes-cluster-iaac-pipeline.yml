@@ -23,6 +23,6 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'brazilsouth'
-    backendAzureRmStorageAccountName: 'storageaccountraphteixeira'
-    backendAzureRmContainerName: 'storageaccountraphteixeiracontainer'
+    backendAzureRmStorageAccountName: 'storageaccountraph'
+    backendAzureRmContainerName: 'storageaccountraphcontainer'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
