@@ -12,6 +12,7 @@ steps:
   inputs:
     secureFile: 'azure_rsa.pub'
 
+# [wip]
 - task: TerraformCLI@2
   inputs:
     command: 'init'
