@@ -7,7 +7,6 @@ pool:
 steps:
 - script: echo K8s Terraform Azure!
   displayName: 'Run a one-line script'
-  
 - task: DownloadSecureFile@1
   name: publickey
   inputs:
@@ -23,6 +22,6 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'brazilsouth'
-    backendAzureRmStorageAccountName: 'storageaccountraph'
-    backendAzureRmContainerName: 'storageaccountraphcontainer'
+    backendAzureRmStorageAccountName: 'storageacctraph'
+    backendAzureRmContainerName: 'storageacctraphcontainer'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
