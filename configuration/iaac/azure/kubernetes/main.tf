@@ -34,10 +34,21 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
 }
 
 terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+
   backend "azurerm" {
     storage_account_name="storageacctraph"
     key="kubernetes-dev.tfstate"
     container_name="storageacctraphcontainer"
     access_key = "OHVwHzyrX2E25fz6oPmkrGL2q8ySUKbc2hlhug1vHm5T8gKO+DiE58CS2tNcZvSSWV2MnnYLztLt+AStezV0gQ=="
   }
+}
+
+provider "azurerm" {
+  features {}
 }
